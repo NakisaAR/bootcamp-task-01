@@ -1,0 +1,153 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variable */
+:root {
+    --color-primary: #1e1e1e;
+    --color-primary-light: #696969;
+    --color-secondary: #AFCEDD;
+    --color-btn: #219f95;
+    --color-headings: #234894;
+    --color-white: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+button {
+    font-size: 1.6rem;
+}
+
+/* Panel */
+
+.panel__title {
+    font-size: 2.2rem;
+    margin: 3rem 2rem 1rem;
+    font-weight: 900;
+}
+
+.panel-admin {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 5rem 2rem;
+}
+
+/* Request */
+.request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.request__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.request__details :nth-of-type(1) {
+    background-color: var(--color-secondary);
+    color: var(--color-headings);
+    border-radius: 0.6rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.request__details div:nth-of-type(2) {
+    color: var(--color-headings);
+    font-weight: bold;
+}
+
+.request__date {
+    color: var(--color-primary-light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.2rem;
+}
+
+.request__title {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.8rem;
+    margin-top: 1.3rem;
+    font-weight: 900;
+}
+
+/* User */
+.user {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.user__prof {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.user__request-id {
+    display: flex;
+    color: var(--color-primary-light);
+    font-size: 1.2rem;
+
+}
+
+.user__data {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user__pic {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    background-color: var(--color-btn);
+    border-radius: 0.5rem;
+}
+
+.user__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button */
+.request__btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    color: var(--color-white);
+    background-color: var(--color-btn);
+    border-radius: 0.8rem;
+    margin: 1.5rem 2rem;
+    padding: 0 0.8rem;
+    border: none;
+}
+
+@media screen and (min-width: 426px) {
+    .panel-admin__container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .panel-admin__container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
